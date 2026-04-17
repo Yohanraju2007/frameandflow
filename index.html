@@ -3,10 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Frame & Flow – Digital Marketing</title>
-<meta name="description" content="Frame & Flow helps businesses grow online with expert digital marketing services including SEO, social media, ads, and content marketing. Get more leads today.">
-<meta name="keywords" content="digital marketing, Frame and Flow, SEO services, social media marketing, business growth, google ads, content marketing India">
+<title>Frame & Flows | Yohan Raju – Web Development & Marketing in Bangalore</title>
+<meta name="description" content="Frame & Flows by Yohan Raju. High-end web development, AI product videos, and SEO strategy for brands in Bangalore. Turn your audience into customers today.">
+<meta name="keywords" content="Yohan Raju, Frame and Flows, Bangalore SEO, Next.js developer Bangalore, AI product videos India, cafe marketing, digital marketing Bangalore">
 <meta name="robots" content="index, follow">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Frame & Flows",
+  "founder": {
+    "@type": "Person",
+    "name": "Yohan Raju"
+  },
+  "url": "https://frameandflows.in",
+  "logo": "https://frameandflows.in/logo.jpg",
+  "image": "https://frameandflows.in/logo.jpg",
+  "description": "Professional web development and digital marketing studio founded by Yohan Raju in Bangalore.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bangalore",
+    "addressRegion": "KA",
+    "addressCountry": "IN"
+  },
+  "serviceType": [
+  "Web Development", 
+  "SEO Optimization", 
+  "AI Video Production", 
+  "Social Media Management", 
+  "Digital Marketing", 
+  "Brand Strategy", 
+  "Performance Ads", 
+  "Content Marketing", 
+  "UI/UX Design", 
+  "Product Photography"
+  "Photography"
+  "Videography"
+  "Trending AI Video marketing"
+],
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
@@ -25,7 +61,15 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-we
 .cursor-ring{width:38px;height:38px;border:1.5px solid rgba(124,92,252,0.55);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%)}
 
 /* CANVAS */
-#bgCanvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+#bgCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at 50% 50%, rgba(124, 92, 252, 0.05) 0%, #050505 80%);
+}
 
 /* 3D SCROLL LAYER WRAPPER */
 .scene{position:relative;z-index:1;transform-style:preserve-3d}
@@ -126,6 +170,38 @@ h2{font-family:var(--font-head);font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight
 .divider-3d{
   height:120px;position:relative;z-index:1;overflow:hidden;
   background:linear-gradient(180deg,transparent,rgba(14,14,18,0.95));
+}
+/* GLOBAL FLOATING CONTACT STYLES */
+.floating-contact {
+  position: fixed;   /* This is what makes it stay on screen */
+  bottom: 30px;      /* Distance from bottom */
+  right: 30px;       /* Distance from right */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 10000;    /* High number to stay on top of orbs and nav */
+}
+
+.float-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.4rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.float-btn.whatsapp { background: #25D366; }
+.float-btn.phone { background: var(--accent); }
+
+.float-btn:hover {
+  transform: scale(1.1) translateY(-5px);
 }
 
 /* SERVICES */
@@ -560,11 +636,224 @@ footer{padding:2.5rem 5vw;border-top:1px solid var(--border);display:flex;align-
 }
 /* ===== LOGO FIX END ===== */
 /* ===== MOBILE FIX END ===== */
+/* ── ROADMAP SECTION STYLES ── */
+#roadmap { 
+    padding: 100px 5vw; 
+    position: relative; 
+    z-index: 1;
+}
+
+.rm-container { 
+    position: relative; 
+    max-width: 1000px; 
+    margin: 60px auto; 
+}
+
+/* The Vertical Glowing Line */
+.rm-line { 
+    position: absolute; 
+    left: 50%; 
+    top: 0; 
+    bottom: 0; 
+    width: 2px; 
+    background: linear-gradient(to bottom, transparent, var(--accent), var(--accent2), transparent); 
+    transform: translateX(-50%);
+    box-shadow: 0 0 15px rgba(124, 92, 252, 0.3);
+}
+
+.rm-item { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+    margin-bottom: 80px; 
+    position: relative; 
+}
+
+/* The Numbered Dots */
+.rm-dot { 
+    position: absolute; 
+    left: 50%; 
+    top: 50%;
+    transform: translate(-50%, -50%); 
+    width: 44px; 
+    height: 44px; 
+    background: #0a0a0c; 
+    border: 2px solid var(--accent);
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    font-size: 0.9rem; 
+    font-weight: 800; 
+    z-index: 2; 
+    color: white;
+    box-shadow: 0 0 20px rgba(124, 92, 252, 0.4);
+}
+
+/* The Content Cards */
+.rm-content { 
+    width: 40%; 
+    padding: 30px; 
+    background: rgba(255,255,255,0.03); 
+    backdrop-filter: blur(12px); 
+    border: 1px solid rgba(255,255,255,0.08); 
+    border-radius: 24px;
+    transition: 0.4s ease;
+}
+
+.rm-content h3 {
+    color: var(--accent);
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.rm-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+.rm-item:nth-child(even) { flex-direction: row-reverse; }
+
+/* Responsive Fix for Mobile */
+@media (max-width: 768px) {
+    .rm-line { left: 20px; transform: none; }
+    .rm-dot { left: 20px; transform: translate(-50%, -50%); }
+    .rm-content { width: 80%; margin-left: 50px; text-align: left !important; }
+    .rm-item, .rm-item:nth-child(even) { flex-direction: row; }
+}
+/* FLOATING CONTACT BUTTONS */
+.floating-contact {
+  position: fixed; /* This makes it stay on screen while scrolling */
+  bottom: 30px;    /* Distance from bottom */
+  right: 30px;     /* Distance from right */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999999; /* This ensures it sits ON TOP of all other layers */
+}
+
+.float-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+
+.whatsapp { background: #25D366; color: white; }
+.phone { background: #7C5CFC; color: white; } /* Using your accent color */
+
+.float-btn:hover {
+  transform: scale(1.1) translateY(-5px);
+}
+
+@media (max-width: 640px) {
+  .floating-contact { bottom: 20px; right: 20px; }
+  .float-btn { width: 45px; height: 45px; font-size: 1.2rem; }
+}
+/* LEFT SIDE FLOATING AD/OFFER */
+.side-offer, .floating-contact {
+  position: fixed !important;
+  z-index: 2147483647 !important; /* This is the maximum possible z-index in a browser */
+}
+
+.side-offer {
+  bottom: 30px !important;
+  left: 30px !important;
+  width: 280px;
+  background: #0e0e12 !important; /* Using your --surface color directly */
+  border: 1px solid #7C5CFC !important;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+
+.floating-contact {
+  bottom: 30px !important;
+  right: 30px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.offer-tag {
+  font-size: 0.65rem;
+  color: var(--accent);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.side-offer h4 {
+  margin: 10px 0 5px 0;
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+}
+
+.side-offer p {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.offer-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(124, 92, 252, 0.4);
+}
+
+.close-offer {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+#ai-nodes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Sits between the grid and the text */
+    pointer-events: none;
+}
 </style>
 </head>
-<body>
+<body style="margin: 0; padding: 0;">
+  
+  <div class="side-offer">
+    <button onclick="this.parentElement.style.display='none'" class="close-offer">×</button>
+    <span class="offer-tag">Special Offer</span>
+    <h4>Free Brand Audit</h4>
+    <p>Is your social media driving sales? Get a free 15-minute audit today.</p>
+    <a href="#contact" class="offer-link">Get My Audit →</a>
+  </div>
 
+  <div class="floating-contact">
+    <a href="https://wa.me/919061377141" class="float-btn whatsapp" target="_blank"><span>💬</span></a>
+    <a href="tel:+919061377141" class="float-btn phone"><span>📞</span></a>
+  </div>
 <canvas id="bgCanvas"></canvas>
+<canvas id="ai-nodes"></canvas>
+
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
@@ -606,8 +895,8 @@ footer{padding:2.5rem 5vw;border-top:1px solid var(--border);display:flex;align-
     <div class="hero-3d-card"></div>
     <div class="hero-3d-card"></div>
     <div class="hero-eyebrow">✦ Digital Marketing Studio</div>
-    <h1>We Drive Strategic<span class="h1-g">Unforgettable.</span></h1>
-    <p class="hero-sub">Premium content, reels, posters and social media strategy — crafted to turn your audience into customers.</p>
+    <h1>We Drive Digital <span class="h1-g">Revenue & Reach.</span></h1>
+    <p class="hero-sub">Frame & Flows by Yohan Raju: Precision Digital Marketing, SEO, and AI Content for brands that want to rank #1 in 2026.</p>
     <div class="hero-btns">
       <a href="#packages" class="btn-p">See Packages →</a>
       <a href="#contact" class="btn-g">📩 Get in Touch</a>
@@ -629,21 +918,115 @@ footer{padding:2.5rem 5vw;border-top:1px solid var(--border);display:flex;align-
 
 <section id="services">
   <div class="svc-intro reveal">
-    <div><div class="stag">What We Do</div><h2>Services Built<br>for Your Brand</h2></div>
+    <div>
+      <div class="stag">What We Do</div>
+      <h2>Services Built<br>for Your Brand</h2>
+    </div>
     <p>From trend-driven reels to Google SEO — every deliverable is polished, on-brand, and drives real results.</p>
   </div>
+
   <div class="svc-grid" style="grid-template-columns:repeat(4,1fr)">
-    <div class="svc-card reveal"><div class="svc-n">01</div><span class="svc-i">🎬</span><h3>Video Reels</h3><p>High-quality, trend-driven short-form videos to boost engagement and reach on Instagram & beyond.</p></div>
-    <div class="svc-card reveal"><div class="svc-n">02</div><span class="svc-i">🎨</span><h3>Creative Poster Design</h3><p>Eye-catching graphic designs and promotional posters that elevate your brand to a premium visual identity.</p></div>
-    <div class="svc-card reveal"><div class="svc-n">03</div><span class="svc-i">📱</span><h3>Social Media Management</h3><p>Complete page handling — strategy, creation, posting — transforming your profile into a business-focused presence.</p></div>
-    <div class="svc-card reveal"><div class="svc-n">04</div><span class="svc-i">🔍</span><h3>SEO Optimization</h3><p>Get found on Google. We optimize your business so it ranks higher in search — driving real, organic traffic to you.</p></div>
-    <div class="svc-card reveal"><div class="svc-n">05</div><span class="svc-i">🌐</span><h3>Website Development</h3><p>Clean, modern websites built to convert visitors into customers and reflect your brand at its very best.</p></div>
-    <div class="svc-card reveal"><div class="svc-n">06</div><span class="svc-i">📣</span><h3>Promotional Content</h3><p>Anchor-hosted promo videos and brand storytelling designed to bring more customers through your door.</p></div>
-    <div class="svc-card reveal" style="background:linear-gradient(135deg,rgba(124,92,252,0.12),rgba(86,204,242,0.06))"><div class="svc-n">07</div><span class="svc-i">🤖</span><h3>AI Product Videos</h3><p>Cutting-edge AI-generated product visuals that make your offering stand out. Cinematic quality, fast turnaround.</p></div>
-    <div class="svc-card reveal"><div class="svc-n">08</div><span class="svc-i">📊</span><h3>Content Strategy</h3><p>Data-driven content planning that aligns with trends and turns your brand into a consistent, recognizable presence.</p></div>
+    
+    <div class="svc-card reveal">
+      <div class="svc-n">01</div>
+      <span class="svc-i">🎬</span>
+      <h3><a href="#contact" style="text-decoration:none; color:inherit; cursor:pointer;">Short-Form Video Marketing</a></h3>
+      <p>High-converting Reels and TikToks crafted to stop the scroll and drive brand engagement for cafes and lifestyle brands.</p>
+    </div>
+
+    <div class="svc-card reveal">
+      <div class="svc-n">02</div>
+      <span class="svc-i">🎨</span>
+      <h3><a href="#contact" style="text-decoration:none; color:inherit; cursor:pointer;">Creative Brand Design</a></h3>
+      <p>Eye-catching graphic designs and promotional posters that elevate your brand to a premium visual identity.</p>
+    </div>
+
+    <div class="svc-card reveal">
+      <div class="svc-n">03</div>
+      <span class="svc-i">📱</span>
+      <h3><a href="#contact" style="text-decoration:none; color:inherit; cursor:pointer;">Social Media Growth Strategy</a></h3>
+      <p>Full-page management focused on community building and turning followers into loyal, paying customers.</p>
+    </div>
+
+    <div class="svc-card reveal">
+      <div class="svc-n">04</div>
+      <span class="svc-i">🔍</span>
+      <h3><a href="#contact" style="text-decoration:none; color:inherit; cursor:pointer;">Local SEO & AEO</a></h3>
+      <p>Dominate Google Maps and AI search results. We ensure your business is the first answer when customers search "near me."</p>
+    </div>
+
+    <div class="svc-card reveal">
+      <div class="svc-n">05</div>
+      <span class="svc-i">🌐</span>
+      <h3><a href="#contact" style="text-decoration:none; color:inherit; cursor:pointer;">Website Development</a></h3>
+      <p>Clean, modern websites built to convert visitors into customers and reflect your brand at its very best.</p>
+    </div>
+
+    <div class="svc-card reveal">
+      <div class="svc-n">06</div>
+      <span class="svc-i">📣</span>
+      <h3><a href="#contact" style="text-decoration:none; color:inherit; cursor:pointer;">Promotional Content</a></h3>
+      <p>Anchor-hosted promo videos and brand storytelling designed to bring more customers through your door.</p>
+    </div>
+
+    <div class="svc-card reveal" style="background:linear-gradient(135deg,rgba(124,92,252,0.12),rgba(86,204,242,0.06))">
+      <div class="svc-n">07</div>
+      <span class="svc-i">🤖</span>
+      <h3><a href="#contact" style="text-decoration:none; color:inherit; cursor:pointer;">AI Product Videos</a></h3>
+      <p>Cutting-edge AI-generated product visuals that make your offering stand out. Cinematic quality, fast turnaround.</p>
+    </div>
+
+    <div class="svc-card reveal">
+      <div class="svc-n">08</div>
+      <span class="svc-i">📊</span>
+      <h3><a href="#contact" style="text-decoration:none; color:inherit; cursor:pointer;">Content Strategy</a></h3>
+      <p>Data-driven content planning that aligns with trends and turns your brand into a consistent, recognizable presence.</p>
+    </div>
+
   </div>
 </section>
+<section id="roadmap" class="reveal">
+  <div class="svc-intro">
+    <div class="stag">Our Process</div>
+    <h2>The Roadmap to<br>Digital Dominance</h2>
+  </div>
 
+  <div class="rm-container">
+    <div class="rm-line"></div>
+    
+    <div class="rm-item reveal-left">
+      <div class="rm-dot">01</div>
+      <div class="rm-content">
+        <h3>Brand Audit & Strategy</h3>
+        <p>We analyze your current presence and identify the "leaks" in your sales funnel. No guesswork—just data.</p>
+      </div>
+    </div>
+
+    <div class="rm-item reveal-right">
+      <div class="rm-dot">02</div>
+      <div class="rm-content">
+        <h3>Creative Production</h3>
+        <p>This is where the magic happens. We craft your high-end reels, AI product videos, and premium designs.</p>
+      </div>
+    </div>
+
+    <div class="rm-item reveal-left">
+      <div class="rm-dot">03</div>
+      <div class="rm-content">
+        <h3>Launch & SEO Push</h3>
+        <p>We deploy your content with precision. Local SEO and AEO kick in to make sure you're found first.</p>
+      </div>
+    </div>
+
+    <div class="rm-item reveal-right">
+      <div class="rm-dot">04</div>
+      <div class="rm-content">
+        <h3>Scale & Revenue</h3>
+        <p>Continuous optimization. We turn the momentum into consistent monthly growth for your brand.</p>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="ai-video">
   <div class="aiv-grid">
     <div class="reveal-left">
@@ -824,7 +1207,7 @@ footer{padding:2.5rem 5vw;border-top:1px solid var(--border);display:flex;align-
     <div class="reveal-left">
       <div class="ab-card">
         <div class="ab-name">Yohan Raju</div>
-        <div class="ab-role">Co-Founder · Creative Digital Marketer & Content Creator</div>
+        <div class="ab-role">Founder · Creative Digital Marketer & Content Creator</div>
         <p class="ab-bio">Helping businesses grow through content, branding & social media. Currently pursuing BCA at Kristu Jayanti University, Bangalore.</p>
         <div class="exp-list">
           <div class="exp-item"><div class="exp-icon">💼</div><div><div class="exp-role">Digital Marketer & Content Creator</div><div class="exp-co">Toastmark · Jan 2026 – Present</div></div></div>
@@ -979,7 +1362,6 @@ function toggleMenu(){
   m.classList.toggle('open');
   document.body.style.overflow=m.classList.contains('open')?'hidden':'';
 }
-// Close on outside click
 document.addEventListener('click',e=>{
   const m=document.getElementById('mobNav');
   const h=document.getElementById('hamburger');
@@ -998,102 +1380,60 @@ document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.le
 const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:.08});
 document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>obs.observe(el));
 
-/* ── 3D PARALLAX SCROLL ── */
-let scrollY=0,targetScrollY=0;
-window.addEventListener('scroll',()=>{targetScrollY=window.scrollY});
-
-const orb1=document.getElementById('orb1');
-const orb2=document.getElementById('orb2');
-const orb3=document.getElementById('orb3');
-
-let mouseX=0,mouseY=0;
-document.addEventListener('mousemove',e=>{mouseX=(e.clientX/window.innerWidth-.5)*2;mouseY=(e.clientY/window.innerHeight-.5)*2});
-
-(function parallaxLoop(){
-  scrollY+=(targetScrollY-scrollY)*.08;
-  const s=scrollY;
-  orb1.style.transform=`translate(${mouseX*-18}px, ${mouseY*-18+s*-.25}px)`;
-  orb2.style.transform=`translate(${mouseX*22}px, ${mouseY*22+s*-.18}px)`;
-  orb3.style.transform=`translate(${mouseX*-14}px, ${mouseY*-14+s*-.3}px)`;
-  requestAnimationFrame(parallaxLoop);
-})();
-
-/* ── WEBGL 3D FLUID ── */
+/* ── NEW PREMIUM 3D DIGITAL GRID ── */
 (function(){
-  const canvas=document.getElementById('bgCanvas');
-  const gl=canvas.getContext('webgl');
-  if(!gl)return;
-  let W,H,t=0;
-  const mouse={x:.5,y:.5};
-  function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;gl.viewport(0,0,W,H)}
-  window.addEventListener('resize',resize);
-  document.addEventListener('mousemove',e=>{mouse.x=e.clientX/window.innerWidth;mouse.y=1-e.clientY/window.innerHeight});
+    const canvas = document.getElementById('bgCanvas');
+    const ctx = canvas.getContext('2d');
+    let width, height, offset = 0;
 
-  const VS=`attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}`;
-  const FS=`precision highp float;
-uniform vec2 R;uniform float T;uniform vec2 M;
-mat2 rot(float a){float c=cos(a),s=sin(a);return mat2(c,-s,s,c);}
-float sm(float a,float b,float k){float h=clamp(.5+.5*(b-a)/k,0.,1.);return mix(b,a,h)-k*h*(1.-h);}
-float blob(vec3 p,float r){return length(p)-r;}
-float scene(vec3 p){
-  vec3 q=p;q.xy*=rot(T*.17);q.yz*=rot(T*.12);
-  float d=blob(q,1.1);
-  vec3 b2=p+vec3(sin(T*.21+1.5)*2.0,cos(T*.16)*1.8,sin(T*.13)*.9);
-  b2.xy*=rot(T*.14+.8);d=sm(d,blob(b2,.85),.9);
-  vec3 b3=p+vec3(cos(T*.18+3.0)*1.9,sin(T*.2+2.0)*1.7,cos(T*.11+1.0)*.8);
-  b3.yz*=rot(T*.15+1.2);d=sm(d,blob(b3,.78),.8);
-  vec3 b4=p+vec3(sin(T*.1)*2.3,cos(T*.23+4.0)*1.4,sin(T*.18+2.5)*1.5);
-  d=sm(d,blob(b4,.62),.7);
-  return d;
-}
-vec3 norm(vec3 p){float e=.001;return normalize(vec3(scene(p+vec3(e,0,0))-scene(p-vec3(e,0,0)),scene(p+vec3(0,e,0))-scene(p-vec3(0,e,0)),scene(p+vec3(0,0,e))-scene(p-vec3(0,0,e))));}
-vec3 pal(float t,vec3 a,vec3 b,vec3 c,vec3 d){return a+b*cos(6.2832*(c*t+d));}
-void main(){
-  vec2 uv=(gl_FragCoord.xy-.5*R)/min(R.x,R.y);
-  vec3 ro=vec3(0,0,5.5);
-  vec3 rd=normalize(vec3(uv+(M-.5)*.28,-1.2));
-  float tot=0.;bool hit=false;vec3 p;
-  for(int i=0;i<80;i++){p=ro+rd*tot;float d=scene(p);if(d<.002){hit=true;break;}if(tot>16.)break;tot+=d*.85;}
-  vec3 col=vec3(.023,.023,.032);
-  if(hit){
-    vec3 n=norm(p);
-    vec3 ld=normalize(vec3(sin(T*.2)*2.,cos(T*.15)*2.,3.));
-    float diff=max(dot(n,ld),0.);
-    float spec=pow(max(dot(reflect(-ld,n),-rd),0.),28.);
-    float fres=pow(1.-max(dot(n,-rd),0.),3.);
-    float ti=tot*.09+T*.12;
-    vec3 c1=pal(ti,vec3(.5,.5,.5),vec3(.5,.5,.5),vec3(1.,1.,1.),vec3(.3,.2,.7));
-    vec3 c2=pal(ti+.35,vec3(.5,.5,.5),vec3(.5,.5,.5),vec3(1.,1.,1.),vec3(.0,.33,.67));
-    vec3 c3=pal(ti+.65,vec3(.5,.5,.5),vec3(.5,.4,.5),vec3(2.,1.,1.),vec3(.5,.2,.25));
-    col=mix(c1,c2,fres*.65)+c3*spec*.55;
-    col=mix(col,c1*diff*.4,.25);
-    col*=.72;
-  }
-  vec2 sc=gl_FragCoord.xy/R;
-  col*=.6+.4*(1.-length((sc-.5)*vec2(1.1,1.5)));
-  col=pow(clamp(col,0.,1.),vec3(.42));
-  col*=.55;
-  gl_FragColor=vec4(col,1.);
-}`;
+    function resize() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
 
-  function mkS(type,src){const s=gl.createShader(type);gl.shaderSource(s,src);gl.compileShader(s);return s;}
-  const prog=gl.createProgram();
-  gl.attachShader(prog,mkS(gl.VERTEX_SHADER,VS));
-  gl.attachShader(prog,mkS(gl.FRAGMENT_SHADER,FS));
-  gl.linkProgram(prog);gl.useProgram(prog);
-  const buf=gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER,buf);
-  gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
-  const al=gl.getAttribLocation(prog,'p');
-  gl.enableVertexAttribArray(al);gl.vertexAttribPointer(al,2,gl.FLOAT,false,0,0);
-  const uR=gl.getUniformLocation(prog,'R'),uT=gl.getUniformLocation(prog,'T'),uM=gl.getUniformLocation(prog,'M');
-  resize();
-  (function frame(){
-    t+=.007;
-    gl.uniform2f(uR,W,H);gl.uniform1f(uT,t);gl.uniform2f(uM,mouse.x,mouse.y);
-    gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
-    requestAnimationFrame(frame);
-  })();
+    function draw() {
+        // Background color
+        ctx.fillStyle = '#060608'; 
+        ctx.fillRect(0, 0, width, height);
+
+        ctx.strokeStyle = 'rgba(124, 92, 252, 0.18)'; // Your Purple Accent
+        ctx.lineWidth = 1;
+
+        const gridSize = 70;
+        const vanishingPointY = height * 0.35; // How high the horizon sits
+
+        // Vertical Perspective Lines
+        for (let x = -width; x < width * 2; x += gridSize) {
+            ctx.beginPath();
+            ctx.moveTo(width / 2, vanishingPointY);
+            ctx.lineTo(x + offset, height);
+            ctx.stroke();
+        }
+
+        // Horizontal Grid Lines
+        for (let i = 0; i < 20; i++) {
+            // This math creates the "acceleration" look as lines get closer to the bottom
+            let pos = (i + (offset / gridSize)) % 20;
+            let y = vanishingPointY + Math.pow(pos / 20, 2) * (height - vanishingPointY);
+            
+            if (y < vanishingPointY) continue;
+
+            // Make the lines wider as they get closer to simulate 3D depth
+            let spread = (y - vanishingPointY) / (height - vanishingPointY);
+            let lineLength = width * 1.5 * spread;
+
+            ctx.beginPath();
+            ctx.moveTo(width/2 - lineLength, y);
+            ctx.lineTo(width/2 + lineLength, y);
+            ctx.stroke();
+        }
+
+        offset += 0.4; // Speed of movement
+        requestAnimationFrame(draw);
+    }
+    draw();
 })();
 
 /* ── VIDEO AUTOPLAY HANDLER ── */
@@ -1103,16 +1443,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if(vid && overlay){
     const p = vid.play();
     if(p !== undefined){
-      p.catch(() => {
-        // Autoplay blocked (mobile) — show tap-to-play overlay
-        overlay.style.opacity = '1';
-      });
+      p.catch(() => { overlay.style.opacity = '1'; });
     }
     vid.addEventListener('playing', () => { overlay.style.opacity = '0'; overlay.style.pointerEvents = 'none'; });
   }
 });
 
-/* ── FORM ── */
+/* ── FORM SUBMISSION ── */
 function submitInquiry(){
   const n  = document.getElementById('name').value.trim();
   const ph = document.getElementById('phone').value.trim();
@@ -1130,7 +1467,6 @@ function submitInquiry(){
   btn.disabled = true;
   document.getElementById('btnText').textContent = 'Sending…';
 
-  // ── WhatsApp message ──
   const waText = encodeURIComponent(
     `🔔 *New Inquiry – Frame & Flow*\n\n` +
     `👤 *Name:* ${n}\n` +
@@ -1142,15 +1478,12 @@ function submitInquiry(){
   );
   const waURL = `https://wa.me/919061377141?text=${waText}`;
 
-  // ── Email via FormSubmit (fires to yohanraju685@gmail.com) ──
-  // IMPORTANT: First submission will ask you to confirm your email — click the link in your inbox once to activate.
   fetch('https://formsubmit.co/ajax/yohanraju685@gmail.com', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify({
       _subject: `🔔 New Inquiry from ${n} – Frame & Flow`,
       _template: 'table',
-      _autoresponse: `Hi ${n}, we received your inquiry and will get back to you within 24 hours! – Frame & Flow`,
       Name: n,
       Phone: ph,
       Email: em,
@@ -1158,17 +1491,75 @@ function submitInquiry(){
       Package: pk,
       Message: ms || 'None'
     })
-  })
-  .then(() => {})
-  .catch(() => {});
+  }).catch(() => {});
 
-  // ── Show success + open WhatsApp ──
   setTimeout(() => {
     window.open(waURL, '_blank');
     document.getElementById('inquiryForm').style.display = 'none';
     document.getElementById('successMsg').style.display  = 'block';
   }, 800);
 }
+/* ── NEURAL AI NODES OVERLAY ── */
+(function() {
+    const canvas = document.getElementById('ai-nodes');
+    const ctx = canvas.getContext('2d');
+    let width, height, nodes = [];
+
+    function resize() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    for (let i = 0; i < 50; i++) {
+        nodes.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * 0.5,
+            vy: (Math.random() - 0.5) * 0.5
+        });
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, width, height);
+        ctx.fillStyle = 'rgba(124, 92, 252, 0.5)';
+        ctx.strokeStyle = 'rgba(124, 92, 252, 0.1)';
+
+        nodes.forEach((n, i) => {
+            n.x += n.vx;
+            n.y += n.vy;
+
+            if (n.x < 0 || n.x > width) n.vx *= -1;
+            if (n.y < 0 || n.y > height) n.vy *= -1;
+
+            ctx.beginPath();
+            ctx.arc(n.x, n.y, 2, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Draw connections to nearby nodes
+            for (let j = i + 1; j < nodes.length; j++) {
+                const n2 = nodes[j];
+                const dist = Math.hypot(n.x - n2.x, n.y - n2.y);
+                if (dist < 150) {
+                    ctx.beginPath();
+                    ctx.moveTo(n.x, n.y);
+                    ctx.lineTo(n2.x, n2.y);
+                    ctx.stroke();
+                }
+            }
+        });
+        requestAnimationFrame(draw);
+    }
+    draw();
+})();
 </script>
+<div class="side-offer">
+  <button onclick="this.parentElement.style.display='none'" class="close-offer">×</button>
+  <span class="offer-tag">Special Offer</span>
+  <h4>Free Brand Audit</h4>
+  <p>Is your social media actually driving sales? Get a free 15-minute audit today.</p>
+  <a href="#contact" class="offer-link">Get My Audit →</a>
+</div>
 </body>
 </html>

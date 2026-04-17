@@ -637,91 +637,77 @@ footer{padding:2.5rem 5vw;border-top:1px solid var(--border);display:flex;align-
 /* ===== LOGO FIX END ===== */
 /* ===== MOBILE FIX END ===== */
 /* ── ROADMAP SECTION STYLES ── */
+/* ── UPDATED MOBILE-FIRST ROADMAP ── */
 #roadmap { 
-    padding: 100px 5vw; 
+    padding: 80px 5vw; 
     position: relative; 
-    z-index: 1;
+    overflow: hidden;
 }
 
 .rm-container { 
     position: relative; 
-    max-width: 1000px; 
-    margin: 60px auto; 
+    max-width: 900px; 
+    margin: 40px auto; 
+    padding-left: 20px; /* Space for the line on mobile */
 }
 
-/* The Vertical Glowing Line */
 .rm-line { 
     position: absolute; 
-    left: 50%; 
+    left: 20px; /* Anchored to left for mobile flow */
     top: 0; 
     bottom: 0; 
     width: 2px; 
-    background: linear-gradient(to bottom, transparent, var(--accent), var(--accent2), transparent); 
-    transform: translateX(-50%);
-    box-shadow: 0 0 15px rgba(124, 92, 252, 0.3);
+    background: linear-gradient(to bottom, transparent, var(--accent), transparent);
 }
 
 .rm-item { 
     display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    width: 100%; 
-    margin-bottom: 80px; 
     position: relative; 
+    margin-bottom: 50px; 
+    width: 100%;
 }
 
-/* The Numbered Dots */
 .rm-dot { 
     position: absolute; 
-    left: 50%; 
-    top: 50%;
-    transform: translate(-50%, -50%); 
-    width: 44px; 
-    height: 44px; 
-    background: #0a0a0c; 
+    left: 0; 
+    top: 0;
+    transform: translateX(-50%); /* Centers dot on the line */
+    width: 36px; 
+    height: 36px; 
+    background: #060608; 
     border: 2px solid var(--accent);
     border-radius: 50%; 
     display: flex; 
     align-items: center; 
     justify-content: center;
-    font-size: 0.9rem; 
+    font-size: 0.8rem; 
     font-weight: 800; 
-    z-index: 2; 
-    color: white;
-    box-shadow: 0 0 20px rgba(124, 92, 252, 0.4);
+    z-index: 5;
+    box-shadow: 0 0 15px rgba(124, 92, 252, 0.4);
 }
 
-/* The Content Cards */
 .rm-content { 
-    width: 40%; 
-    padding: 30px; 
+    margin-left: 45px; /* Pushes text away from the line */
+    width: calc(100% - 60px); 
+    padding: 20px; 
     background: rgba(255,255,255,0.03); 
-    backdrop-filter: blur(12px); 
+    backdrop-filter: blur(10px); 
     border: 1px solid rgba(255,255,255,0.08); 
-    border-radius: 24px;
-    transition: 0.4s ease;
+    border-radius: 18px;
+    text-align: left;
 }
 
-.rm-content h3 {
-    color: var(--accent);
-    margin-bottom: 10px;
-    font-size: 1.25rem;
-}
+.rm-content h3 { color: var(--accent); font-size: 1.1rem; margin-bottom: 8px; }
+.rm-content p { font-size: 0.85rem; color: var(--muted); line-height: 1.5; }
 
-.rm-content p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: var(--muted);
-}
-
-.rm-item:nth-child(even) { flex-direction: row-reverse; }
-
-/* Responsive Fix for Mobile */
-@media (max-width: 768px) {
-    .rm-line { left: 20px; transform: none; }
-    .rm-dot { left: 20px; transform: translate(-50%, -50%); }
-    .rm-content { width: 80%; margin-left: 50px; text-align: left !important; }
-    .rm-item, .rm-item:nth-child(even) { flex-direction: row; }
+/* Desktop adjustments (keeps it looking good on laptops too) */
+@media (min-width: 769px) {
+    .rm-container { padding-left: 0; }
+    .rm-line { left: 50%; }
+    .rm-item { justify-content: space-between; align-items: center; }
+    .rm-item:nth-child(even) { flex-direction: row-reverse; }
+    .rm-dot { left: 50%; top: 50%; transform: translate(-50%, -50%); }
+    .rm-content { width: 40%; margin-left: 0; }
 }
 /* FLOATING CONTACT BUTTONS */
 .floating-contact {
